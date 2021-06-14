@@ -114,16 +114,7 @@ public class LinkedList {
 			}
 			temp = temp.next;
 		}
-		while (check) {
-			i++;
-			if (temp.data == element) {
-				System.out.println("Found " + element + " at index " + i);
-			} else {
-				System.out.println("Not found");
-			}
-			check=false;
-		}
-	}
+		
 	
 	/**
 	 * void show method
