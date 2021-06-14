@@ -6,7 +6,7 @@ public class Runner {
 	   * main method
 	   * Linked list is class creating an numberList object 
 	   * @param args
-	   * calling show function
+	   * calling all functions 
 	   */
 	
 public static void main(String[] args) {
@@ -18,7 +18,7 @@ public static void main(String[] args) {
 	    list.insertAt(2, 40);
 		list.Search(30);
 		list.deleteAt(2);
-		
+		list.sortList();
 		list.show();
 	}
 
