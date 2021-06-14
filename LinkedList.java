@@ -92,6 +92,39 @@ public class LinkedList {
 		
 	}
 	
+
+/**
+ *  Search method with a void type
+ *  Check weather element is present or not
+ *  if element is present it will print it index number 
+ *
+ */
+	
+	public void Search(int element) {
+		Node temp = head;
+		boolean check = true;
+		int i = 0;
+		while (temp.next != null) {
+			if (temp.data == element) {
+				System.out.println("Found " + element + " at index " + i);
+				check = false;
+				break;
+			} else {
+				i++;
+			}
+			temp = temp.next;
+		}
+		while (check) {
+			i++;
+			if (temp.data == element) {
+				System.out.println("Found " + element + " at index " + i);
+			} else {
+				System.out.println("Not found");
+			}
+			check=false;
+		}
+	}
+	
 	/**
 	 * void show method
 	 * prints the node
