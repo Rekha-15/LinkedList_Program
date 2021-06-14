@@ -1,5 +1,11 @@
 package com;
 
+/**
+ * LinkedList is a class of public type
+ * @author rekha
+ *
+ */
+
 public class LinkedList {
 
  //head -> null
@@ -67,6 +73,22 @@ public class LinkedList {
 	
 	public void deleteFirst() {
 		head=head.next;
+		
+	}
+	
+	/**
+	 * deletelast is a method 
+	 * @author rekha
+	 * it will delet the last node in a sequence
+	 *
+	 */
+	
+	public void deleteLast() {
+		Node temp = head;
+		while(temp.next.next !=null) {
+			temp=temp.next;
+		}
+		temp.next=null;
 		
 	}
 	
