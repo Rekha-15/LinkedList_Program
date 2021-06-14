@@ -6,6 +6,7 @@ package com;
  *
  */
 
+
 public class LinkedList {
 
  //head -> null
@@ -71,8 +72,53 @@ public class LinkedList {
 		
 	}
 	
-	public void deleteFirst() {
-		head=head.next;
+	public void insertAtStart(int data)
+	{
+		Node node = new Node();
+		node.data = data;
+		node.next = null;
+		node.next = head;
+		head = node;
+	}
+	
+	/**
+	 * insertAT is an method of void
+	 * here i am giving index value and adding the element in index 2 between the index 2 and 3
+	 */
+	
+	public void insertAt(int index,int data)
+	{
+		Node node = new Node();
+		node.data = data;
+		node.next = null;
+		
+		if(index==0)
+		{
+			insertAtStart(data);
+		}
+		else{
+		Node n = head;
+		for(int i=0;i<index-1;i++)
+		{
+			n = n.next;
+		}
+		node.next = n.next;
+		n.next = node;
+		}
+	}
+	
+	/**
+	 * deletAt method of voide type
+	 * here deliting the element at first
+	 * @author rekha
+	 *
+	 */
+	
+	public void deleteAt(int index) {
+		if(index== 0)
+		{
+			head = head.next;
+		}
 		
 	}
 	
@@ -138,7 +184,7 @@ public class LinkedList {
 		{
 			System.out.println(node.data);
 			node = node.next;
-		}	
+		}
 		System.out.println(node.data);
 	}
 }
