@@ -65,6 +65,11 @@ public class LinkedList {
 		
 	}
 	
+	public void deleteFirst() {
+		head=head.next;
+		
+	}
+	
 	/**
 	 * void show method
 	 * prints the node
