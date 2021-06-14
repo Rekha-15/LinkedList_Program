@@ -174,16 +174,48 @@ public class LinkedList {
 			}
 			temp = temp.next;
 		}
-		while (check) {
-			i++;
-			if (temp.data == element) {
-				System.out.println("Found " + element + " at index " + i);
-			} else {
-				System.out.println("Not found");
-			}
-			check=false;
-		}
 	}
+	
+
+/**
+ * ortList() will sort nodes of the list in ascending order
+ * Node current will point to head
+ * Node index will point to node next to current
+ *
+ */
+	
+    public void sortList()
+    {
+  
+        Node current = head, index = null;
+  
+        int temp;
+  
+        if (head == null) {
+            return;
+        }
+        else {
+            while (current != null) {
+             
+                index = current.next;
+  
+                while (index != null) {
+                    // If current node's data is greater
+                    // than index's node data, swap the data
+                    // between them
+                    if (current.data > index.data) {
+                        temp = current.data;
+                        current.data = index.data;
+                        index.data = temp;
+                    }
+  
+                    index = index.next;
+                }
+                current = current.next;
+            }
+        }
+    }
+		
 	
 	/**
 	 * void show method
