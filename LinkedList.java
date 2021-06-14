@@ -111,15 +111,29 @@ public class LinkedList {
 	 * deletAt method of voide type
 	 * here deliting the element at first
 	 * @author rekha
+	 * deleting the value by providing index number of 40
 	 *
 	 */
 	
-	public void deleteAt(int index) {
-		if(index== 0)
+	public void deleteAt(int index)
+	{
+		if(index==0)
 		{
 			head = head.next;
 		}
-		
+		else
+		{
+			Node n = head;
+			Node n1 = null;
+			for(int i=0;i<index-1;i++)
+			{
+				n = n.next;
+			}
+			n1 = n.next;
+			n.next = n1.next;
+			//System.out.println("n1 " + n1.data);
+			n1 = null;
+		}
 	}
 	
 	/**
